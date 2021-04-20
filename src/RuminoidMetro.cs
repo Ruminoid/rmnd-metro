@@ -71,6 +71,6 @@ namespace Ruminoid.Common2.Metro
         void IResourceProvider.AddOwner(IResourceHost owner) => (Loaded as IResourceProvider)?.AddOwner(owner);
         void IResourceProvider.RemoveOwner(IResourceHost owner) => (Loaded as IResourceProvider)?.RemoveOwner(owner);
 
-        private Uri GetUri() => new("avares://Ruminoid.Common2.Metro/RuminoidMetro.xaml", UriKind.Absolute);
+        private Uri GetUri() => new("avares://rmnd-metro/RuminoidMetro.xaml", UriKind.Absolute);
     }
 }
