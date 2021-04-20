@@ -2,9 +2,9 @@ using System;
 using System.Globalization;
 using Avalonia.Data.Converters;
 
-namespace Ruminoid.Common2.Metro
+namespace Ruminoid.Common2.Metro.Utils.Converters
 {
-    internal class InverseBooleanValueConverter : IValueConverter
+    public class InverseBooleanValueConverter : IValueConverter
     {
         public bool Default { get; set; }
 
