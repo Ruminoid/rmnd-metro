@@ -8,4 +8,5 @@
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/TabControl.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/TabItem.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ToggleButton.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/NativeMenuBar.xaml" />
 </Styles>
