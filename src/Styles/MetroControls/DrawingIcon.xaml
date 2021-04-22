@@ -1,0 +1,31 @@
+<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:metroControls="clr-namespace:Ruminoid.Common2.Metro.MetroControls">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <metroControls:DrawingIcon>
+                <metroControls:DrawingIcon.Icon>
+                    <GeometryDrawing Brush="#222222"
+                                     Geometry="M14 7V8H8V14H7V8H1V7H7V1H8V7H14Z" />
+                </metroControls:DrawingIcon.Icon>
+            </metroControls:DrawingIcon>
+        </Border>
+    </Design.PreviewWith>
+    <Style Selector="metroControls|DrawingIcon">
+        <Setter Property="Width" Value="{TemplateBinding Width}"/>
+        <Setter Property="Height" Value="{TemplateBinding Height}"/>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <DrawingPresenter
+                        Width="{TemplateBinding Width}"
+                        Height="{TemplateBinding Height}"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Drawing="{TemplateBinding Icon}"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</Styles>
