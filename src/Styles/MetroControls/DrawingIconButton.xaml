@@ -3,13 +3,31 @@
         xmlns:metroControls="clr-namespace:Ruminoid.Common2.Metro.MetroControls">
     <Design.PreviewWith>
         <Border Padding="20">
-            <metroControls:DrawingIconButton
-                Content="Click Me!">
-                <metroControls:DrawingIconButton.Icon>
-                    <GeometryDrawing Brush="#C5C5C5"
-                                     Geometry="M14 7V8H8V14H7V8H1V7H7V1H8V7H14Z" />
-                </metroControls:DrawingIconButton.Icon>
-            </metroControls:DrawingIconButton>
+            <StackPanel Spacing="20">
+                <metroControls:DrawingIconButton
+                    Content="Click Me!">
+                    <metroControls:DrawingIconButton.Icon>
+                        <GeometryDrawing Brush="#C5C5C5"
+                                         Geometry="M14 7V8H8V14H7V8H1V7H7V1H8V7H14Z" />
+                    </metroControls:DrawingIconButton.Icon>
+                </metroControls:DrawingIconButton>
+                <metroControls:DrawingIconButton
+                    IsEnabled="False"
+                    Content="Click Me!">
+                    <metroControls:DrawingIconButton.Icon>
+                        <GeometryDrawing Brush="#C5C5C5"
+                                         Geometry="M14 7V8H8V14H7V8H1V7H7V1H8V7H14Z" />
+                    </metroControls:DrawingIconButton.Icon>
+                </metroControls:DrawingIconButton>
+                <metroControls:DrawingIconButton
+                    Classes="transparent"
+                    Content="Click Me!">
+                    <metroControls:DrawingIconButton.Icon>
+                        <GeometryDrawing Brush="#C5C5C5"
+                                         Geometry="M14 7V8H8V14H7V8H1V7H7V1H8V7H14Z" />
+                    </metroControls:DrawingIconButton.Icon>
+                </metroControls:DrawingIconButton>
+            </StackPanel>
         </Border>
     </Design.PreviewWith>
     <Styles.Resources>
@@ -18,7 +36,7 @@
     <Style Selector="metroControls|DrawingIconButton">
         <Setter Property="Background" Value="{DynamicResource ButtonBackground}" />
         <Setter Property="Foreground" Value="{DynamicResource ButtonForeground}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource ButtonBackgroundDisabled}" />
         <Setter Property="BorderThickness" Value="{DynamicResource ButtonBorderThemeThickness}" />
         <Setter Property="Padding" Value="{DynamicResource ButtonPadding}" />
         <Setter Property="HorizontalAlignment" Value="Left" />
@@ -28,7 +46,7 @@
         <Setter Property="Template">
             <ControlTemplate>
                 <Border
-                    Name="ContentStylePresenter"
+                    Name="PART_Border"
                     BorderBrush="{TemplateBinding BorderBrush}"
                     BorderThickness="{TemplateBinding BorderThickness}"
                     Padding="{TemplateBinding Padding}"
@@ -51,63 +69,23 @@
         </Setter>
     </Style>
 
-    <!-- PointerOverState -->
-    <Style Selector="metroControls|DrawingIconButton:pointerover /template/ Border#ContentStylePresenter">
-        <Setter Property="Background" Value="{DynamicResource ButtonBackgroundPointerOver}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderBrushPointerOver}" />
-        <Setter Property="TextBlock.Foreground" Value="{DynamicResource ButtonForegroundPointerOver}" />
+    <Style Selector="metroControls|DrawingIconButton:pointerover /template/ Border#PART_Border">
+        <Setter Property="BorderBrush" Value="{DynamicResource AccentButtonBackground}" />
     </Style>
 
-    <Style Selector="metroControls|DrawingIconButton:pressed  /template/ Border#ContentStylePresenter">
-        <Setter Property="Background" Value="{DynamicResource ButtonBackgroundPressed}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderBrushPressed}" />
-        <Setter Property="TextBlock.Foreground" Value="{DynamicResource ButtonForegroundPressed}" />
+    <Style Selector="metroControls|DrawingIconButton:pressed /template/ Border#PART_Border">
+        <Setter Property="Background" Value="{DynamicResource AccentButtonBackground}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource AccentButtonBackground}" />
     </Style>
 
-    <Style Selector="metroControls|DrawingIconButton:disabled /template/ Border#ContentStylePresenter">
+    <Style Selector="metroControls|DrawingIconButton:disabled /template/ Border#PART_Border">
         <Setter Property="Background" Value="{DynamicResource ButtonBackgroundDisabled}" />
         <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderBrushDisabled}" />
         <Setter Property="TextBlock.Foreground" Value="{DynamicResource ButtonForegroundDisabled}" />
     </Style>
 
-    <Style Selector="metroControls|DrawingIconButton.accent /template/ Border#ContentStylePresenter">
-        <Setter Property="Background" Value="{DynamicResource AccentButtonBackground}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource AccentButtonBorderBrush}" />
-        <Setter Property="TextBlock.Foreground" Value="{DynamicResource AccentButtonForeground}" />
-    </Style>
-
-    <Style Selector="metroControls|DrawingIconButton.accent:pointerover /template/ Border#ContentStylePresenter">
-        <Setter Property="Background" Value="{DynamicResource AccentButtonBackgroundPointerOver}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource AccentButtonBorderBrushPointerOver}" />
-        <Setter Property="TextBlock.Foreground" Value="{DynamicResource AccentButtonForegroundPointerOver}" />
-    </Style>
-
-    <Style Selector="metroControls|DrawingIconButton.accent:pressed  /template/ Border#ContentStylePresenter">
-        <Setter Property="Background" Value="{DynamicResource AccentButtonBackgroundPressed}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource AccentButtonBorderBrushPressed}" />
-        <Setter Property="TextBlock.Foreground" Value="{DynamicResource AccentButtonForegroundPressed}" />
-    </Style>
-
-    <Style Selector="metroControls|DrawingIconButton">
-        <Setter Property="RenderTransform" Value="none" />
-        <Setter Property="Transitions">
-            <Transitions>
-                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:.075" />
-            </Transitions>
-        </Setter>
-    </Style>
-
-    <Style Selector="metroControls|DrawingIconButton:pressed, RepeatButton:pressed, ToggleButton:pressed">
-        <Setter Property="RenderTransform" Value="scale(0.98)" />
-    </Style>
-
-    <Style Selector="metroControls|DrawingIconButton.accent:disabled /template/ Border#ContentStylePresenter">
-        <Setter Property="Background" Value="{DynamicResource AccentButtonBackgroundDisabled}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource AccentButtonBorderBrushDisabled}" />
-        <Setter Property="TextBlock.Foreground" Value="{DynamicResource AccentButtonForegroundDisabled}" />
-    </Style>
-
-    <Style Selector="metroControls|DrawingIconButton /template/ Border#ContentStylePresenter">
-        <Setter Property="CornerRadius" Value="{DynamicResource ControlCornerRadius}" />
+    <Style Selector="metroControls|DrawingIconButton.transparent">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="Transparent" />
     </Style>
 </Styles>
