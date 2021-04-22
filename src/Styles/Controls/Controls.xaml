@@ -7,6 +7,7 @@
     <!-- TabControl needs to come after TabStrip as it redefines the inner TabStrip.ItemsPanel-->
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/TabControl.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/TabItem.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/TextBox.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ToggleButton.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/NativeMenuBar.xaml" />
 </Styles>
