@@ -30,4 +30,7 @@
   <ItemGroup>
     <AvaloniaResource Include="**/*.xaml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\rmnd-common2\src\rmnd-common2.csproj" />
+  </ItemGroup>
 </Project>
