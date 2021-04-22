@@ -1,17 +1,17 @@
 <Window xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Ruminoid.Common2.Metro.MetroControls.Dialogs.MessageBox"
-             ExtendClientAreaChromeHints="NoChrome"
-             ExtendClientAreaTitleBarHeightHint="-1"
-             ExtendClientAreaToDecorationsHint="True"
-             Width="400" Height="300"
-             CanResize="False"
-             WindowStartupLocation="CenterScreen"
-             ShowActivated="True"
-             ShowInTaskbar="False">
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Ruminoid.Common2.Metro.MetroControls.Dialogs.MessageBox"
+        ExtendClientAreaChromeHints="NoChrome"
+        ExtendClientAreaTitleBarHeightHint="-1"
+        ExtendClientAreaToDecorationsHint="True"
+        Width="400" Height="300"
+        CanResize="False"
+        WindowStartupLocation="CenterScreen"
+        ShowActivated="True"
+        ShowInTaskbar="False">
     <Grid
         RowDefinitions="*,Auto"
         Margin="18">
@@ -22,7 +22,7 @@
             VerticalAlignment="Center">
             <StackPanel.Styles>
                 <Style Selector="TextBlock">
-                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="HorizontalAlignment" Value="Center" />
                 </Style>
             </StackPanel.Styles>
 
@@ -30,32 +30,31 @@
                 Name="TitleBlock"
                 FontWeight="Bold"
                 TextWrapping="NoWrap"
-                FontSize="24"/>
+                FontSize="24" />
             <TextBlock
                 Name="ContentBlock"
-                TextWrapping="Wrap"/>
+                TextWrapping="Wrap" />
         </StackPanel>
 
         <StackPanel
             Grid.Row="1"
-            Spacing="12">
+            Spacing="12"
+            Orientation="Horizontal"
+            HorizontalAlignment="Right">
             <StackPanel.Styles>
                 <Style Selector="Button">
-                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
-                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
-                    <Setter Property="VerticalContentAlignment" Value="Center"/>
-                    <Setter Property="Height" Value="40"/>
+                    <Setter Property="MinWidth" Value="72" />
                 </Style>
             </StackPanel.Styles>
 
             <Button
                 Name="YesButton"
                 Click="YesClick"
-                Content="是"/>
+                Content="是" />
             <Button
                 Name="NoButton"
                 Click="NoClick"
-                Content="否"/>
+                Content="否" />
         </StackPanel>
     </Grid>
 </Window>
