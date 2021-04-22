@@ -1,5 +1,7 @@
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Define ToolTip first so its styles can be overriden by other controls (e.g. TextBox) -->
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ToolTip.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/Button.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/CheckBox.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ComboBox.xaml" />
