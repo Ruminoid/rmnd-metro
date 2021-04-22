@@ -1,6 +1,5 @@
 <Styles xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        x:Class="Ruminoid.Common2.Metro.Controls.Controls">
-    <StyleInclude Source="avares://rmnd-metro/Controls/TabStrip.xaml" />
-    <StyleInclude Source="avares://rmnd-metro/Controls/TabStripItem.xaml" />
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/TabStrip.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/TabStripItem.xaml" />
 </Styles>
