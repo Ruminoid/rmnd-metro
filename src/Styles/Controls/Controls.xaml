@@ -1,6 +1,9 @@
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/Button.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/Menu.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ContextMenu.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/MenuItem.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/RadioButton.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/TabStrip.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/TabStripItem.xaml" />
