@@ -1,0 +1,108 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Grid Width="800"
+              ColumnDefinitions="*,10,*">
+            <Border Grid.Column="0">
+                <TabControl>
+                    <TabItem Header="Arch">
+                        <Border Background="AntiqueWhite"
+                                Height="100">
+                            <TextBlock Text="Content" Foreground="Black" FontSize="20" />
+                        </Border>
+                    </TabItem>
+                    <TabItem Header="Leaf">
+                        <Border Background="Green"
+                                Height="100" />
+                    </TabItem>
+                    <TabItem Header="Disabled"
+                             IsEnabled="False" />
+                </TabControl>
+            </Border>
+            <Grid Grid.Column="1"
+                  Background="Red" />
+            <Border Grid.Column="2">
+                <TabControl TabStripPlacement="Left">
+                    <TabItem Header="Arch">
+                        <Border Background="AntiqueWhite"
+                                Height="100">
+                            <TextBlock Text="Content" Foreground="Black" FontSize="20" />
+                        </Border>
+                    </TabItem>
+                    <TabItem Header="Leaf">
+                        <Border Background="Green"
+                                Height="100" />
+                    </TabItem>
+                    <TabItem Header="Disabled"
+                             IsEnabled="False" />
+                </TabControl>
+            </Border>
+        </Grid>
+    </Design.PreviewWith>
+
+    <Style Selector="TabControl">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="{DynamicResource TabItemMargin}" />
+        <Setter Property="Background" Value="{DynamicResource TabControlBackground}" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border Margin="{TemplateBinding Margin}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Background="{TemplateBinding Background}"
+                        HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                    <DockPanel>
+                        <Grid
+                            DockPanel.Dock="{TemplateBinding TabStripPlacement}"
+                            RowDefinitions="Auto,Auto">
+                            <ItemsPresenter
+                                Grid.Row="0"
+                                Name="PART_ItemsPresenter"
+                                Items="{TemplateBinding Items}"
+                                ItemsPanel="{TemplateBinding ItemsPanel}"
+                                ItemTemplate="{TemplateBinding ItemTemplate}"
+                                Margin="6,6,6,0" />
+                            <Grid
+                                Grid.Row="1"
+                                Name="PART_Splitter"
+                                Background="{DynamicResource SystemControlHighlightAltAccentBrush}"
+                                Height="2" />
+                        </Grid>
+
+                        <ContentPresenter Name="PART_SelectedContentHost"
+                                          Margin="{TemplateBinding Padding}"
+                                          HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Content="{TemplateBinding SelectedContent}"
+                                          ContentTemplate="{TemplateBinding SelectedContentTemplate}" />
+                    </DockPanel>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+
+    <Style Selector="TabControl[TabStripPlacement=Left] /template/ ItemsPresenter#PART_ItemsPresenter > WrapPanel">
+        <Setter Property="Orientation" Value="Vertical" />
+    </Style>
+    <Style Selector="TabControl[TabStripPlacement=Right] /template/ ItemsPresenter#PART_ItemsPresenter > WrapPanel">
+        <Setter Property="Orientation" Value="Vertical" />
+    </Style>
+    <Style Selector="TabControl[TabStripPlacement=Left] TabItem">
+        <Setter Property="MinHeight" Value="36" />
+    </Style>
+    <Style Selector="TabControl[TabStripPlacement=Right] TabItem">
+        <Setter Property="MinHeight" Value="36" />
+    </Style>
+
+    <Style Selector="TabControl[TabStripPlacement=Top] /template/ ItemsPresenter#PART_ItemsPresenter">
+        <Setter Property="Margin" Value="0,0,0,2" />
+    </Style>
+
+    <Style Selector="TabControl /template/ Grid#PART_Splitter">
+        <Setter Property="IsVisible" Value="False" />
+    </Style>
+    <Style Selector="TabControl[TabStripPlacement=Top] /template/ Grid#PART_Splitter">
+        <Setter Property="IsVisible" Value="True" />
+    </Style>
+</Styles>
