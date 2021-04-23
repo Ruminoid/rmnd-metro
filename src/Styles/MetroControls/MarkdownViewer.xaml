@@ -104,13 +104,13 @@
     </Style>
     <Style Selector="TextBlock.CodeBlock">
         <Style.Setters>
-            <Setter Property="Foreground" Value="{mde:DivideColor Blue, SystemBaseHighColor, 0.45}" />
+            <Setter Property="Foreground" Value="{mde:DivideColor SystemAccentColor, SystemBaseHighColor, 0.9}" />
         </Style.Setters>
     </Style>
 
     <Style Selector="ctxt|CCode">
         <Style.Setters>
-            <Setter Property="Foreground" Value="{mde:DivideColor Blue, SystemBaseHighColor, 0.45}" />
+            <Setter Property="Foreground" Value="{mde:DivideColor SystemAccentColor, SystemBaseHighColor, 0.9}" />
             <Setter Property="Background" Value="{mde:Alpha SystemBaseHighColor, 0.15}" />
         </Style.Setters>
     </Style>
