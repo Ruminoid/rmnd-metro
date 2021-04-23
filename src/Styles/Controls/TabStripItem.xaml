@@ -1,0 +1,59 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border>
+            <StackPanel Spacing="4">
+                <TabStripItem>Leaf</TabStripItem>
+                <TabStripItem IsSelected="True">Arch</TabStripItem>
+            </StackPanel>
+        </Border>
+    </Design.PreviewWith>
+    <Styles.Resources>
+        <x:Double x:Key="TabStripItemMinHeight">48</x:Double>
+    </Styles.Resources>
+
+    <Style Selector="TabStripItem">
+        <Setter Property="FontSize" Value="{DynamicResource TabItemHeaderFontSize}" />
+        <Setter Property="FontWeight" Value="{DynamicResource TabItemHeaderThemeFontWeight}" />
+        <Setter Property="Background" Value="{DynamicResource TabItemHeaderBackgroundSelected}" />
+        <Setter Property="Foreground" Value="{DynamicResource TabItemHeaderForegroundSelected}" />
+        <Setter Property="Padding" Value="{DynamicResource TabItemHeaderMargin}" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="MinHeight" Value="{DynamicResource TabStripItemMinHeight}" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border Name="PART_LayoutRoot"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Padding="{TemplateBinding Padding}">
+                    <Panel>
+                        <ContentPresenter Name="PART_ContentPresenter"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          Content="{TemplateBinding Content}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          TextBlock.FontFamily="{TemplateBinding FontFamily}"
+                                          TextBlock.FontSize="{TemplateBinding FontSize}"
+                                          TextBlock.FontWeight="{TemplateBinding FontWeight}" />
+                    </Panel>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+
+    <Style Selector="TabStripItem /template/ Border#PART_LayoutRoot">
+        <Setter Property="Background" Value="{Binding $parent[TabStripItem].Background}" />
+    </Style>
+
+    <!--  Disabled state  -->
+    <Style Selector="TabStripItem:disabled /template/ Border#PART_LayoutRoot">
+        <Setter Property="Background" Value="{DynamicResource TabItemHeaderBackgroundDisabled}" />
+        <Setter Property="TextBlock.Foreground" Value="{DynamicResource TabItemHeaderForegroundDisabled}" />
+    </Style>
+
+    <!-- Metro -->
+    <Style Selector="TabStripItem:selected">
+        <Setter Property="Background" Value="{DynamicResource SystemControlHighlightAltAccentBrush}" />
+    </Style>
+</Styles>

@@ -2,16 +2,22 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <!-- Define ToolTip first so its styles can be overriden by other controls (e.g. TextBox) -->
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ToolTip.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/DataValidationErrors.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/FocusAdorner.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/Button.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/CheckBox.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ComboBox.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ComboBoxItem.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ContentControl.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/Label.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/GridSplitter.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ItemsControl.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ListBox.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ListBoxItem.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/Menu.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ContextMenu.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/MenuItem.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/OverlayPopupHost.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/PopupRoot.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ProgressBar.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/RadioButton.xaml" />
@@ -27,6 +33,9 @@
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/TabItem.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/TextBox.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ToggleButton.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/Expander.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/TreeView.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/TreeViewItem.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/UserControl.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/Window.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/EmbeddableControlRoot.xaml" />
