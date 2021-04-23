@@ -12,6 +12,7 @@
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/Menu.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ContextMenu.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/MenuItem.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/PopupRoot.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ProgressBar.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/RadioButton.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/RepeatButton.xaml" />
@@ -26,7 +27,9 @@
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/TabItem.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/TextBox.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ToggleButton.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/UserControl.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/Window.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/EmbeddableControlRoot.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ButtonSpinner.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/NumericUpDown.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/NativeMenuBar.xaml" />
