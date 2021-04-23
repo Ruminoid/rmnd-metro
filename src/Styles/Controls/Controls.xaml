@@ -12,7 +12,9 @@
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/Menu.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ContextMenu.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/MenuItem.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ProgressBar.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/RadioButton.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/RepeatButton.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/TabStrip.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/TabStripItem.xaml" />
     <!-- TabControl needs to come after TabStrip as it redefines the inner TabStrip.ItemsPanel-->
@@ -21,6 +23,8 @@
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/TextBox.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ToggleButton.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/Window.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ButtonSpinner.xaml" />
+    <StyleInclude Source="avares://rmnd-metro/Styles/Controls/NumericUpDown.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/NativeMenuBar.xaml" />
     <StyleInclude Source="avares://rmnd-metro/Styles/Controls/ToggleSwitch.xaml" />
 </Styles>
