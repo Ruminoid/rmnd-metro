@@ -1,0 +1,67 @@
+<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="30">
+            <StackPanel Spacing="18">
+                <Button Classes="block" Content="Click me!" />
+                <Button Classes="block" Content="Click me!" IsEnabled="False" />
+                <Button Classes="block accent" Content="Click me!" />
+                <Button Classes="block accent" Content="Click me!" IsEnabled="False" />
+            </StackPanel>
+        </Border>
+    </Design.PreviewWith>
+    <Style Selector="Button.block">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid>
+                    <Grid
+                        Name="PART_AccentBackground"
+                        Background="{DynamicResource SystemAccentColorLight1}" />
+                    <ContentPresenter x:Name="PART_ContentPresenter"
+                                      Background="{TemplateBinding Background}"
+                                      BorderBrush="Transparent"
+                                      BorderThickness="0"
+                                      Content="{TemplateBinding Content}"
+                                      ContentTemplate="{TemplateBinding ContentTemplate}"
+                                      Padding="{TemplateBinding Padding}"
+                                      HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                      VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    <Grid
+                        Name="PART_Cover"
+                        Background="White" />
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+
+    <Style Selector="Button.block">
+        <Setter Property="Background" Value="Transparent" />
+    </Style>
+    <Style Selector="Button.block /template/ Grid#PART_AccentBackground">
+        <Setter Property="Opacity" Value="0" />
+    </Style>
+
+    <Style Selector="Button.block /template/ Grid#PART_Cover">
+        <Setter Property="Opacity" Value="0" />
+        <Setter Property="Transitions">
+            <Transitions>
+                <DoubleTransition Property="Opacity" Duration="0:0:0.05" />
+            </Transitions>
+        </Setter>
+    </Style>
+    <Style Selector="Button.block:pointerover /template/ Grid#PART_Cover">
+        <Setter Property="Opacity" Value="0.2" />
+    </Style>
+
+    <Style Selector="Button.accent[IsEnabled=True] /template/ Grid#PART_AccentBackground">
+        <Style.Animations>
+            <Animation Duration="0:0:2" PlaybackDirection="Alternate" IterationCount="INFINITE">
+                <KeyFrame Cue="0%">
+                    <Setter Property="Opacity" Value="0.6"/>
+                </KeyFrame>
+                <KeyFrame Cue="100%">
+                    <Setter Property="Opacity" Value="1.0"/>
+                </KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+</Styles>
