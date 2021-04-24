@@ -54,7 +54,7 @@
     </Style>
 
     <Style Selector="ToggleButton:checked /template/ ContentPresenter#PART_ContentPresenter">
-        <Setter Property="Background" Value="{DynamicResource ToggleButtonBackgroundCheckedPointerOver}" />
+        <Setter Property="Background" Value="{DynamicResource SystemAccentColorDark1}" />
         <Setter Property="BorderBrush" Value="{DynamicResource ToggleButtonBorderBrushChecked}" />
         <Setter Property="TextBlock.Foreground" Value="{DynamicResource ToggleButtonForegroundChecked}" />
     </Style>

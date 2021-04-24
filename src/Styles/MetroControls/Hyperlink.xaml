@@ -3,10 +3,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:metroControls="clr-namespace:Ruminoid.Common2.Metro.MetroControls">
     <Style Selector="metroControls|Hyperlink">
-        <Setter Property="Foreground" Value="#3483eb" />
+        <Setter Property="Foreground" Value="{DynamicResource SystemAccentColor}" />
     </Style>
     <Style Selector="metroControls|Hyperlink:pointerover">
         <Setter Property="Cursor" Value="Hand" />
-        <Setter Property="Foreground" Value="#3496eb" />
+        <Setter Property="Foreground" Value="{DynamicResource SystemAccentColorLight2}" />
     </Style>
 </Styles>
