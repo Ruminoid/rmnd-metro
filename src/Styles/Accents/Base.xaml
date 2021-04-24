@@ -26,7 +26,7 @@
         <Color x:Key="SystemAccentColorLight3">#FFA6D8FF</Color>
 
         <!-- System Control Colors -->
-        <Color x:Key="SystemAltHighColor">#FF2D2D30</Color>
+        <Color x:Key="SystemAltHighColor">#FF1E1E1E</Color>
         <Color x:Key="SystemAltLowColor">#33000000</Color>
         <Color x:Key="SystemAltMediumColor">#99000000</Color>
         <Color x:Key="SystemAltMediumHighColor">#CC000000</Color>
