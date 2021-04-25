@@ -28,7 +28,7 @@ namespace Ruminoid.Common2.Metro.MetroControls.Dialogs
 
             if (!showNoButton)
             {
-                this.FindControl<Button>("YesButton").Content = "çD";
+                this.FindControl<Button>("YesButton").Content = "Â•Ω";
                 this.FindControl<Button>("NoButton").IsVisible = false;
             }
 
