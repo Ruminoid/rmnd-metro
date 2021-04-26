@@ -44,7 +44,6 @@
                                       HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                       VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                       Grid.Column="1" />
-                    <!-- TODO: TextWrapping="Wrap" on contentpresenter -->
                 </Grid>
             </ControlTemplate>
         </Setter>
@@ -161,8 +160,8 @@
     </Style>
 
     <Style Selector="CheckBox:checked:pointerover /template/ Border#NormalRectangle">
-        <Setter Property="BorderBrush" Value="{DynamicResource CheckBoxCheckBackgroundStrokeCheckedPointerOver}" />
-        <Setter Property="Background" Value="{DynamicResource CheckBoxCheckBackgroundFillCheckedPointerOver}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColorLight1}" />
+        <Setter Property="Background" Value="{DynamicResource SystemAccentColorLight1}" />
     </Style>
 
     <Style Selector="CheckBox:checked:pointerover /template/ Path#CheckGlyph">
@@ -180,8 +179,8 @@
     </Style>
 
     <Style Selector="CheckBox:checked:pressed /template/ Border#NormalRectangle">
-        <Setter Property="BorderBrush" Value="{DynamicResource CheckBoxCheckBackgroundStrokeCheckedPressed}" />
-        <Setter Property="Background" Value="{DynamicResource CheckBoxCheckBackgroundFillCheckedPressed}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColorDark1}" />
+        <Setter Property="Background" Value="{DynamicResource SystemAccentColorDark1}" />
     </Style>
 
     <Style Selector="CheckBox:checked:pressed /template/ Path#CheckGlyph">
@@ -241,8 +240,8 @@
     </Style>
 
     <Style Selector="CheckBox:indeterminate:pointerover /template/ Border#NormalRectangle">
-        <Setter Property="BorderBrush" Value="{DynamicResource CheckBoxCheckBackgroundStrokeIndeterminatePointerOver}" />
-        <Setter Property="Background" Value="{DynamicResource CheckBoxCheckBackgroundFillIndeterminatePointerOver}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColorLight1}" />
+        <Setter Property="Background" Value="{DynamicResource SystemAccentColorLight1}" />
     </Style>
 
     <Style Selector="CheckBox:indeterminate:pointerover /template/ Path#CheckGlyph">
@@ -260,8 +259,8 @@
     </Style>
 
     <Style Selector="CheckBox:indeterminate:pressed /template/ Border#NormalRectangle">
-        <Setter Property="BorderBrush" Value="{DynamicResource CheckBoxCheckBackgroundStrokeIndeterminatePressed}" />
-        <Setter Property="Background" Value="{DynamicResource CheckBoxCheckBackgroundFillIndeterminatePressed}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColorDark1}" />
+        <Setter Property="Background" Value="{DynamicResource SystemAccentColorDark1}" />
     </Style>
 
     <Style Selector="CheckBox:indeterminate:pressed /template/ Path#CheckGlyph">

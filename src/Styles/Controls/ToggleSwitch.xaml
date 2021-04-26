@@ -180,8 +180,8 @@
     </Style>
 
     <Style Selector="ToggleSwitch:pointerover /template/ Border#SwitchKnobBounds">
-        <Setter Property="Background" Value="{DynamicResource ToggleSwitchFillOnPointerOver}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource ToggleSwitchStrokeOnPointerOver}" />
+        <Setter Property="Background" Value="{DynamicResource SystemAccentColorLight1}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColorLight1}" />
     </Style>
 
     <Style Selector="ToggleSwitch:pointerover /template/ Grid#SwitchAreaGrid">
@@ -195,8 +195,8 @@
     </Style>
 
     <Style Selector="ToggleSwitch:pressed /template/ Border#SwitchKnobBounds">
-        <Setter Property="Background" Value="{DynamicResource ToggleSwitchFillOnPressed}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource ToggleSwitchStrokeOnPressed}" />
+        <Setter Property="Background" Value="{DynamicResource SystemAccentColorDark1}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColorDark1}" />
     </Style>
 
     <Style Selector="ToggleSwitch:pressed /template/ Ellipse#SwitchKnobOff">
