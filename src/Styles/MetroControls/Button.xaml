@@ -40,6 +40,11 @@
         <Setter Property="Opacity" Value="0" />
     </Style>
 
+    <Style Selector="Button.block:pressed  /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource SystemAccentColorDark1}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColorDark1}" />
+    </Style>
+
     <Style Selector="Button.block /template/ Grid#PART_Cover">
         <Setter Property="Opacity" Value="0" />
         <Setter Property="Transitions">
