@@ -1,0 +1,90 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:metroControls="clr-namespace:Ruminoid.Common2.Metro.MetroControls">
+    <Design.PreviewWith>
+        <Border>
+            <StackPanel Spacing="4" Orientation="Horizontal">
+                <metroControls:ClosableTabItem Header="Leaf" />
+                <metroControls:ClosableTabItem Header="Arch" IsSelected="True" IsClosable="True" />
+                <metroControls:ClosableTabItem Header="Arch" IsEnabled="False" />
+            </StackPanel>
+        </Border>
+    </Design.PreviewWith>
+
+    <Style Selector="metroControls|ClosableTabItem">
+        <Setter Property="FontSize" Value="{DynamicResource TabItemHeaderFontSize}" />
+        <Setter Property="FontWeight" Value="{DynamicResource TabItemHeaderThemeFontWeight}" />
+        <Setter Property="Background" Value="{DynamicResource TabItemHeaderBackgroundSelected}" />
+        <Setter Property="Foreground" Value="{DynamicResource TabItemHeaderForegroundSelected}" />
+        <Setter Property="Padding" Value="{DynamicResource TabItemHeaderMargin}" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="MinHeight" Value="28" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid>
+                    <Border Name="PART_LayoutRoot"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Padding="{TemplateBinding Padding}">
+                        <Grid
+                            ColumnDefinitions="Auto,Auto">
+                            <Panel
+                                Grid.Column="0">
+                                <ContentPresenter Name="PART_ContentPresenter"
+                                                  ContentTemplate="{TemplateBinding HeaderTemplate}"
+                                                  Content="{TemplateBinding Header}"
+                                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                  TextBlock.FontFamily="{TemplateBinding FontFamily}"
+                                                  TextBlock.FontSize="{TemplateBinding FontSize}"
+                                                  TextBlock.FontWeight="{TemplateBinding FontWeight}" />
+
+                            </Panel>
+                            <Button
+                                Grid.Column="1"
+                                Margin="6,0,0,0"
+                                Classes="block"
+                                Name="PART_TabCloseButton"
+                                IsVisible="{TemplateBinding IsClosable}">
+                                <metroControls:DrawingIcon
+                                    Height="8"
+                                    Width="8"
+                                    Icon="{DynamicResource VSCodeDark.close}" />
+                            </Button>
+                        </Grid>
+                    </Border>
+                    <Grid
+                        Name="PART_Cover"
+                        Background="White"
+                        IsHitTestVisible="False" />
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+
+    <Style Selector="metroControls|ClosableTabItem /template/ Border#PART_LayoutRoot">
+        <Setter Property="Background" Value="{Binding $parent[metroControls:ClosableTabItem].Background}" />
+    </Style>
+
+    <Style Selector="metroControls|ClosableTabItem:disabled /template/ Border#PART_LayoutRoot">
+        <Setter Property="Background" Value="{DynamicResource TabItemHeaderBackgroundDisabled}" />
+        <Setter Property="TextBlock.Foreground" Value="{DynamicResource TabItemHeaderForegroundDisabled}" />
+    </Style>
+
+    <Style Selector="metroControls|ClosableTabItem:selected">
+        <Setter Property="Background" Value="{DynamicResource SystemControlHighlightAltAccentBrush}" />
+    </Style>
+
+    <Style Selector="metroControls|ClosableTabItem /template/ Grid#PART_Cover">
+        <Setter Property="Opacity" Value="0" />
+        <Setter Property="Transitions">
+            <Transitions>
+                <DoubleTransition Property="Opacity" Duration="0:0:0.05" />
+            </Transitions>
+        </Setter>
+    </Style>
+    <Style Selector="metroControls|ClosableTabItem:pointerover /template/ Grid#PART_Cover">
+        <Setter Property="Opacity" Value="0.2" />
+    </Style>
+</Styles>
