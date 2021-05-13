@@ -97,7 +97,7 @@
 
     <Style Selector="RadioButton:pointerover /template/ Ellipse#CheckOuterEllipse">
         <Setter Property="Stroke" Value="{DynamicResource RadioButtonOuterEllipseCheckedStrokePointerOver}" />
-        <Setter Property="Fill" Value="{DynamicResource RadioButtonOuterEllipseCheckedFillPointerOver}" />
+        <Setter Property="Fill" Value="{DynamicResource SystemAccentColorLight1}" />
     </Style>
 
     <Style Selector="RadioButton:pointerover /template/ Ellipse#CheckGlyph">
