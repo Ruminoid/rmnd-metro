@@ -148,11 +148,11 @@
     </Style>
 
     <Style Selector="ScrollBar:vertical /template/ Thumb.thumb">
-        <Setter Property="RenderTransform" Value="{DynamicResource VerticalSmallScrollThumbScaleTransform}" />
+        <Setter Property="RenderTransform" Value="scaleX(0.125) translateX(-2px)" />
     </Style>
 
     <Style Selector="ScrollBar:horizontal /template/ Thumb.thumb">
-        <Setter Property="RenderTransform" Value="{DynamicResource HorizontalSmallScrollThumbScaleTransform}" />
+        <Setter Property="RenderTransform" Value="scaleY(0.125) translateY(-2px)" />
     </Style>
 
     <Style Selector="ScrollBar[IsExpanded=true] /template/ Thumb.thumb">

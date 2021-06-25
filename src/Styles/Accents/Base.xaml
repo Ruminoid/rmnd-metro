@@ -524,8 +524,6 @@
         <x:Double x:Key="ScrollBarSize">16</x:Double>
         <x:Double x:Key="SmallScrollThumbScale">0.125</x:Double>
         <x:Double x:Key="SmallScrollThumbOffset">-2</x:Double>
-        <TransformOperations x:Key="VerticalSmallScrollThumbScaleTransform">scaleX(0.125) translateX(-2px)</TransformOperations>
-        <TransformOperations x:Key="HorizontalSmallScrollThumbScaleTransform">scaleY(0.125) translateY(-2px)</TransformOperations>
         <x:Double x:Key="ScrollBarButtonArrowIconFontSize">8</x:Double>
 
         <!-- BaseResources for ScrollViewer.xaml -->
