@@ -50,7 +50,7 @@
                                 <metroControls:DrawingIcon
                                     Height="8"
                                     Width="8"
-                                    Icon="{DynamicResource VSCodeDark.close}" />
+                                    Icon="{DynamicResource MetroIcons.close}" />
                             </Button>
                         </Grid>
                     </Border>
